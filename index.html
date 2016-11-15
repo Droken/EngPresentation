@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Esoteric languages</title>
+        <script src="jquery.js"></script>
+        <script src="main.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    <body>
+        <div id="main-panel">
+            <ul>
+                <li class="selector current" rel="panel1"><br/>1</li>
+                <li class="selector" rel="panel2"><br/>2 </li>
+                <li class="selector" rel="panel3"><br/>3</li>
+                <li class="selector" rel="panel4"><br/>4</li>
+            </ul>
+
+            <div id="panel1" class="panel active" data-left="panel1" data-right="panel2">
+                <div class="content">
+                    <h2>Esoteric Languages</h2>
+                    <p>
+                        Based on
+                    </p>
+                </div>
+                <img class="side" src="code.jpg"/>
+            </div>
+
+            <div id="panel2" class="panel" data-left="panel1" data-right="panel3">
+                Panel 2
+            </div>
+
+            <div id="panel3" class="panel" data-left="panel2" data-right="panel4">
+                Panel 3
+            </div>
+
+            <div id="panel4" class="panel" data-left="panel3" data-right="panel4">
+                Panel 4
+            </div>
+
+        </div>
+    </body>
+</html>
