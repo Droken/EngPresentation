@@ -95,3 +95,8 @@
     background-color:transparent;
 
 }
+
+.panel.active.image {
+    background-color:inherit;
+    border:none;
+}
