@@ -8,7 +8,9 @@
     <body>
         <div id="main-panel">
             <ul class="selector-list">
-                <li class="selector current" rel="panel0"><br/>I</li>
+
+                <li class="selector current" rel="initpanel"><br/>-</li>
+                <li class="selector" rel="panel0"><br/>I</li>
                 <li class="selector" rel="panel1"><br/>1</li>
                 <li class="selector" rel="panel2"><br/>CW </li>
                 <li class="selector" rel="panel3"><br/>T</li>
@@ -18,7 +20,11 @@
                 <li class="selector" rel="panel7"><br/>3</li>
                 <li class="selector" rel="panel8"><br/>C</li>
             </ul>
-            <div id="panel0" class="panel splash active" data-left="panel0" data-right="panel1">
+
+            <div id="initpanel" class="panel splash active" data-left="initpanel" data-right="panel0">
+                English Presentation
+            </div>
+            <div id="panel0" class="panel splash" data-left="initpanel" data-right="panel1">
                 Procedurally Generated Terrain
             </div>
             <div id="panel1" class="panel" data-left="panel0" data-right="panel2">
