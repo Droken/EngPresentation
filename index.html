@@ -18,10 +18,8 @@
                 <li class="selector" rel="panel7"><br/>7</li>
                 <li class="selector" rel="panel8"><br/>8</li>
             </ul>
-            <div id="panel0" class="panel active" data-left="panel0" data-right="panel1">
-                <p class="panel-splash">
-                    Procedurally Generated Terrain
-                </p>
+            <div id="panel0" class="panel splash active" data-left="panel0" data-right="panel1">
+                Procedurally Generated Terrain
             </div>
             <div id="panel1" class="panel" data-left="panel0" data-right="panel2">
                 <div class="content">
@@ -34,48 +32,52 @@
 
                     </p>
                 </div>
-                <img class="side" src="terrain.png"/>
+                <img class="side" src="cw.jpg"/>
             </div>
 
-            <div id="panel2" class="panel" data-left="panel1" data-right="panel3">
+            <div id="panel2" class="panel image" data-left="panel1" data-right="panel3">
                 <img class="panel-image" src="cw.jpg"/>
             </div>
 
-            <div id="panel3" class="panel" data-left="panel2" data-right="panel4">
+            <div id="panel3" class="panel image" data-left="panel2" data-right="panel4">
                 <img class="panel-image" src="terrain.png"/>
             </div>
 
             <div id="panel4" class="panel" data-left="panel3" data-right="panel5">
-                <h2>What does it mean ?</h2>
-                <ul>
-                    <li>1 specific Key / Terrain</li>
-                    <li>1 calculation / Coordinate</li>
-                    <li>Map file size = Key size !</li>
-                </ul>
+                <div class="content">
+                    <h2>What does it mean ?</h2>
+                    <ul>
+                        <li>1 specific Key / Terrain</li>
+                        <li>1 calculation / Coordinate</li>
+                        <li>Map file size = Key size !</li>
+                    </ul>
+                </div>
+                <img src="terrain.png" class="side"/>
             </div>
 
-            <div id="panel5" class="panel" data-left="panel4" data-right="panel6">
+            <div id="panel5" class="panel image" data-left="panel4" data-right="panel6">
                 <img class="panel-image" src="noise.jpg"/>
             </div>
 
-            <div id="panel6" class="panel" data-left="panel5" data-right="panel7">
+            <div id="panel6" class="panel image" data-left="panel5" data-right="panel7">
                 <img class="panel-image" src="terrain.png"/>
             </div>
 
             <div id="panel7" class="panel" data-left="panel6" data-right="panel8">
-                <h2>How does it work ?</h2>
-                <ul>
-                    <li>f(x,y,z) => Object ( height, structure, etc. )</li>
-                    <li>Modifications have to be saved too</li>
-                    <li>Extremely efficient for raw terrains</li>
-                    <li>Can be done quite fast</li>
-                </ul>
+                <div class="content">
+                    <h2>How does it work ?</h2>
+                    <ul>
+                        <li>f(x,y,z) => Object ( height, structure, etc. )</li>
+                        <li>Modifications have to be saved too</li>
+                        <li>Extremely efficient for raw terrains</li>
+                        <li>Can be done quite fast</li>
+                    </ul>
+                </div>
+                <img src="noise.jpg" class="side"/>
             </div>
 
-            <div id="panel8" class="panel" data-left="panel7" data-right="panel8">
-                <p class="panel-splash">
-                    Thank you for listening !
-                </p>
+            <div id="panel8" class="panel splash" data-left="panel7" data-right="panel8">
+                Thank you for listening !
             </div>
         </div>
         <div id="copyright">
