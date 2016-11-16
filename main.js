@@ -1,6 +1,6 @@
 $(function(){
 
-    $("#main-panel .selector").on("click",function() // When I click on tab
+    $("#main-panel .selector-list .selector").on("click",function() // When I click on tab
     {
         var panelToShow=$(this).attr("rel");
         $(".current").removeClass("current");

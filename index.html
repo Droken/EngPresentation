@@ -1,41 +1,82 @@
 <html>
     <head>
-        <title>Esoteric languages</title>
+        <title>Procedural Terrain Gen.</title>
         <script src="jquery.js"></script>
         <script src="main.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css"/>
     </head>
     <body>
         <div id="main-panel">
-            <ul>
-                <li class="selector current" rel="panel1"><br/>1</li>
+            <ul class="selector-list">
+                <li class="selector current" rel="panel0"><br/>0</li>
+                <li class="selector" rel="panel1"><br/>1</li>
                 <li class="selector" rel="panel2"><br/>2 </li>
                 <li class="selector" rel="panel3"><br/>3</li>
                 <li class="selector" rel="panel4"><br/>4</li>
+                <li class="selector" rel="panel5"><br/>5</li>
+                <li class="selector" rel="panel6"><br/>6</li>
+                <li class="selector" rel="panel7"><br/>7</li>
+                <li class="selector" rel="panel8"><br/>8</li>
             </ul>
-
-            <div id="panel1" class="panel active" data-left="panel1" data-right="panel2">
+            <div id="panel0" class="panel active" data-left="panel0" data-right="panel1">
+                <p class="panel-splash">
+                    Procedurally Generated Terrain
+                </p>
+            </div>
+            <div id="panel1" class="panel" data-left="panel0" data-right="panel2">
                 <div class="content">
-                    <h2>Esoteric Languages</h2>
                     <p>
-                        Based on
+                        <ul>
+                            <li>What does it do ?</li>
+                            <li>What does it mean ?</li>
+                            <li>How does it work ?</li>
+                        </ul>
+
                     </p>
                 </div>
-                <img class="side" src="code.jpg"/>
+                <img class="side" src="terrain.png"/>
             </div>
 
             <div id="panel2" class="panel" data-left="panel1" data-right="panel3">
-                Panel 2
+                <img class="panel-image" src="cw.jpg"/>
             </div>
 
             <div id="panel3" class="panel" data-left="panel2" data-right="panel4">
-                Panel 3
+                <img class="panel-image" src="terrain.png"/>
             </div>
 
-            <div id="panel4" class="panel" data-left="panel3" data-right="panel4">
-                Panel 4
+            <div id="panel4" class="panel" data-left="panel3" data-right="panel5">
+                <h2>What does it mean ?</h2>
+                <ul>
+                    <li>1 specific Key / Terrain</li>
+                    <li>1 calculation / Coordinate</li>
+                    <li>Map file size = Key size !</li>
+                </ul>
             </div>
 
+            <div id="panel5" class="panel" data-left="panel4" data-right="panel6">
+                <img class="panel-image" src="noise.jpg"/>
+            </div>
+
+            <div id="panel6" class="panel" data-left="panel5" data-right="panel7">
+                <img class="panel-image" src="terrain.png"/>
+            </div>
+
+            <div id="panel7" class="panel" data-left="panel6" data-right="panel8">
+                <h2>How does it work ?</h2>
+                <ul>
+                    <li>f(x,y,z) => Object ( height, structure, etc. )</li>
+                    <li>Modifications have to be saved too</li>
+                    <li>Extremely efficient for raw terrains</li>
+                    <li>Can be done quite fast</li>
+                </ul>
+            </div>
+
+            <div id="panel8" class="panel" data-left="panel7" data-right="panel8">
+                <p class="panel-splash">
+                    Thank you for listening !
+                </p>
+            </div>
         </div>
     </body>
 </html>
