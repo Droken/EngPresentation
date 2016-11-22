@@ -56,7 +56,7 @@ function setLeftRight() {
     $(element).data("left",left);
     $(element).data("right",right);
 
-    index+=1;
+    index++;
 }
 
 ///
@@ -80,7 +80,7 @@ function generateSelectorList()
     $(".panel").each(function(){
         var opt=(i==1)?" current":"";
         res+="<li class='selector"+opt+"' rel='"+$(this).attr("id")+"'><br/>"+romanize(i)+"</li>\n";
-        i=i+1;
+        i++;
     });
     $(".selector-list").each(function(){$(this).append(res);});
 }
