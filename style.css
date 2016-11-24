@@ -100,3 +100,32 @@
     background-color:inherit;
     border:none;
 }
+
+.arrow {
+    display : none;
+    position: absolute;
+    top:45%;
+    width:100px;
+    height:100px;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:80px;
+    font-weight: bold;
+    text-align:center;
+    font-family:cursive;
+    line-height:90px;
+    color:slategray;
+    background-color:rgba(255,255,255,0.5);
+}
+
+.arrow.active-arrow {
+    display:block;
+}
+
+.arrow.left {
+    left:10px;
+}
+
+.arrow.right {
+    right:10px;
+}

@@ -3,6 +3,7 @@ var index=0;
 $(function(){
 
     setupPanels();
+    $("#main-panel").append("<div class='arrow left'>&lt;</div><div class='arrow right'>&gt;</div>");
     generateSelectorList();
 
     $("#main-panel .selector-list .selector").on("click",function() // When I click on tab
@@ -13,33 +14,46 @@ $(function(){
         togglePanel(panelToShow);
     });
 
+    $(".arrow").on("click",function(){
+        if($(this).hasClass("left")) navigatePanel("left");
+        if($(this).hasClass("right")) navigatePanel("right");
+    });
+
     $(".panel").each(setLeftRight);
 
     $("body").on("keydown",function(e) {
       if(e.keyCode == 37) { // left
-        var panel=$(".active").data("left")
-        togglePanel(panel);
-        $(".current").removeClass("current");
-        $("[rel="+panel+"]").addClass("current");
+        navigatePanel("left");
       }
       else if(e.keyCode == 39) { // right
-        var panel=$(".active").data("right")
-        togglePanel(panel);
-        $(".current").removeClass("current");
-        $("[rel="+panel+"]").addClass("current");
+        navigatePanel("right");
       }
     });
 
 });
 
+function navigatePanel(direction)
+{
+      var panel=$(".active").data(direction)
+      togglePanel(panel);
+      $(".current").removeClass("current");
+      $("[rel="+panel+"]").addClass("current");
+}
+
 function togglePanel(panel)
 {
     if(!$("#"+panel).hasClass("active"))
-        $(".panel.active").slideUp(0, function(){
+        $(".panel.active").slideUp(300, function(){
             $(this).removeClass("active");
-            $("#"+panel).slideDown(0, function(){
+            $("#"+panel).slideDown(300, function(){
                 $(this).addClass("active");
-            });
+                if($(this).hasClass("image"))$(".arrow").each(function(){
+                    $(this).addClass("active-arrow");
+                });
+                else {$(".arrow").each(function(){
+                    $(this).removeClass("active-arrow");
+                });
+            }});
         });
 }
 
